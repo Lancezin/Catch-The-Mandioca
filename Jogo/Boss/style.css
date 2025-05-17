@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  text-align: center;
+  background: #f0f8ff;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 20px;
+}
+
+#game {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  background-color: #d0f0c0;
+  overflow: hidden;
+  border: 2px solid #333;
+  margin: 0 auto;
+}
+
+#basket {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 60px;
+  background-image: url('../../imagens/cesto.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#basket-hitbox {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  height: 30px;
+  /* background-color: rgba(255, 0, 0, 0.3);  <- útil para testar colisão */
+}
+
+.falling {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.good { }
+.bad { }
+
+#score {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Mira do Poró (caso queira reativar no futuro) */
+.poro-aim-line {
+  position: absolute;
+  width: 2px;
+  background-color: red;
+  opacity: 0.6;
+  animation: blink 0.6s infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Mira da Maomandiocafrita */
+.mao-aim-line {
+  position: absolute;
+  width: 80%;
+  height: 4px;
+  background-color: limegreen;
+  animation: blink 0.5s infinite alternate;
+  left: 10%;
+  top: 95%;
+  z-index: 0;
+}
+
+@keyframes blink {
+  from { opacity: 0.6; }
+  to { opacity: 0.1; }
+}
+
+/* HUD de vidas (FL, HL, NL) */
+#life-ui img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Overlay roxo do ataque beterraba */
+.boss-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 0, 128, 0.5);
+  z-index: 0;
+}
+
+/* Mensagem central */
+#game .message {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 80%;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 100;
+}
+
+#game .message.red {
+  color: red;
+}
