@@ -432,7 +432,7 @@ setTimeout(() => {
 
 function shootRaiz(x, y) {
   const raiz = document.createElement('img');
-  raiz.src = '../../imagens/Raiz.png';
+  raiz.src = '../../Imagens/Raiz.png';
   raiz.className = 'falling bad';
   raiz.style.position = 'absolute';
   raiz.style.width = '30px';
